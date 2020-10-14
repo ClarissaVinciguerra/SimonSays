@@ -13,6 +13,7 @@
 		70211FFE2537714F00986313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70211FFD2537714F00986313 /* Assets.xcassets */; };
 		702120012537714F00986313 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70211FFF2537714F00986313 /* LaunchScreen.storyboard */; };
 		7021200F253795E400986313 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7021200E253795E400986313 /* User.swift */; };
+		702120152537969A00986313 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702120142537969A00986313 /* UserController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		702120002537714F00986313 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		702120022537714F00986313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7021200E253795E400986313 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		702120142537969A00986313 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		70211FF32537714E00986313 /* SimonSays */ = {
 			isa = PBXGroup;
 			children = (
+				702120122537967D00986313 /* Controllers */,
 				7021200C253775B800986313 /* Models */,
 				702120092537715C00986313 /* Resources */,
 				70211FFA2537714E00986313 /* Main.storyboard */,
@@ -81,6 +84,22 @@
 				7021200E253795E400986313 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		702120122537967D00986313 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				702120132537968800986313 /* ModelControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		702120132537968800986313 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				702120142537969A00986313 /* UserController.swift */,
+			);
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +174,7 @@
 			files = (
 				70211FF52537714E00986313 /* AppDelegate.swift in Sources */,
 				70211FF72537714E00986313 /* SceneDelegate.swift in Sources */,
+				702120152537969A00986313 /* UserController.swift in Sources */,
 				7021200F253795E400986313 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
