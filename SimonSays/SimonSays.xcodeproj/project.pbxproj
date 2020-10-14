@@ -14,6 +14,7 @@
 		702120012537714F00986313 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70211FFF2537714F00986313 /* LaunchScreen.storyboard */; };
 		7021200F253795E400986313 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7021200E253795E400986313 /* User.swift */; };
 		702120152537969A00986313 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702120142537969A00986313 /* UserController.swift */; };
+		7021201B25379DEC00986313 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7021201A25379DEC00986313 /* GameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		702120022537714F00986313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7021200E253795E400986313 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		702120142537969A00986313 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		7021201A25379DEC00986313 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				702120142537969A00986313 /* UserController.swift */,
+				7021201A25379DEC00986313 /* GameController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70211FF52537714E00986313 /* AppDelegate.swift in Sources */,
+				7021201B25379DEC00986313 /* GameController.swift in Sources */,
 				70211FF72537714E00986313 /* SceneDelegate.swift in Sources */,
 				702120152537969A00986313 /* UserController.swift in Sources */,
 				7021200F253795E400986313 /* User.swift in Sources */,

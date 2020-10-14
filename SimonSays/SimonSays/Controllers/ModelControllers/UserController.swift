@@ -16,5 +16,4 @@ class UserController {
     func addUser() {
         
     }
-    
 }
