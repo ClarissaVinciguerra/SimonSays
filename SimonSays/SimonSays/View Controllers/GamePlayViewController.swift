@@ -26,14 +26,15 @@ class GamePlayViewController: UIViewController {
         super.viewDidLoad()
         addActionsToColorViews()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        game.startNewGame()
-    }
+
 
     //MARK: - Actions
-    @objc func handleRedTapped(_ sender: UITapGestureRecognizer? = nil) {
+    @objc func handleStartGame(_ sender: UITapGestureRecognizer) {
+        game.startNewGame()
+        showSequenceOfPresses()
+    }
+    
+    @objc func handleRedTapped(_ sender: UITapGestureRecognizer) {
         if isGameOver {
            isGameOver = false
            gameLabel.text = ""
@@ -55,8 +56,8 @@ class GamePlayViewController: UIViewController {
            isGameOver = true
         }
     }
-    
-    @objc func handleGreenTapped(_ sender: UITapGestureRecognizer? = nil) {
+
+    @objc func handleGreenTapped(_ sender: UITapGestureRecognizer) {
         if isGameOver {
             isGameOver = false
             gameLabel.text = ""
@@ -140,6 +141,9 @@ class GamePlayViewController: UIViewController {
     }
     
     func addActionsToColorViews() {
+        let startGameTapped = UITapGestureRecognizer(target: self, action: #selector(handleStartGame(_:)))
+        gameLabel.addGestureRecognizer(startGameTapped)
+        self.gameLabel.isUserInteractionEnabled = true
         let tapRed = UITapGestureRecognizer(target: self, action: #selector(self.handleRedTapped(_:)))
         redView.addGestureRecognizer(tapRed)
         let tapGreen = UITapGestureRecognizer(target: self, action: #selector(self.handleGreenTapped(_:)))
@@ -188,11 +192,10 @@ class GamePlayViewController: UIViewController {
         let alert = UIAlertController(title: "Game Over", message: "You scored \(score)", preferredStyle: .alert)
         let scoreBoardAction = UIAlertAction(title: "See score board", style: .default) { (_) in
             let scoreBoardVC = ScoreBoardViewController()
-            self.navigationController?.pushViewController(scoreBoardVC, animated: true)
+            self.present(scoreBoardVC, animated: true)
         }
-        let playAgainAction = UIAlertAction(title: "Play Again", style: .destructive) { (_) in
-            print("Play again")
-        }
+        let playAgainAction = UIAlertAction(title: "Play Again", style: .destructive)
+        
         alert.addAction(scoreBoardAction)
         alert.addAction(playAgainAction)
         present(alert, animated: true)
