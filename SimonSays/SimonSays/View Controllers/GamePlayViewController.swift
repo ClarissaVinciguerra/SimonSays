@@ -26,11 +26,15 @@ class GamePlayViewController: UIViewController {
         super.viewDidLoad()
         addActionsToColorViews()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        game.startNewGame()
+    }
 
     //MARK: - Actions
     @objc func handleRedTapped(_ sender: UITapGestureRecognizer? = nil) {
         if isGameOver {
-           // start a new game
            isGameOver = false
            gameLabel.text = ""
            game.startNewGame()
@@ -53,7 +57,6 @@ class GamePlayViewController: UIViewController {
     }
     
     @objc func handleGreenTapped(_ sender: UITapGestureRecognizer? = nil) {
-        print("green")
         if isGameOver {
             isGameOver = false
             gameLabel.text = ""
@@ -77,7 +80,6 @@ class GamePlayViewController: UIViewController {
     }
     
     @objc func handleBlueTapped(_ sender: UITapGestureRecognizer? = nil) {
-        print("blue")
         if isGameOver {
             isGameOver = false
             gameLabel.text = ""
@@ -87,12 +89,10 @@ class GamePlayViewController: UIViewController {
         let response = game.userSelected(2)
         switch response {
         case .correctAndContinue:
-           print("correct, now tell the user they were right")
            show("Correct", after: 0)
         case .correctAndNewRound:
            show("Correct, time for new round", after: 0)
            showSequenceOfPresses()
-           print("correct, now tell the user what the next round should be")
         case .incorrect:
            gameLabel.alpha = 1
            gameLabel.text = "You lost. Press any button to start again"
@@ -101,7 +101,6 @@ class GamePlayViewController: UIViewController {
     }
     
     @objc func handleYellowTapped(_ sender: UITapGestureRecognizer? = nil) {
-        print("yellow")
         if isGameOver {
             isGameOver = false
             gameLabel.text = ""
@@ -111,12 +110,10 @@ class GamePlayViewController: UIViewController {
         let response = game.userSelected(3)
         switch response {
         case .correctAndContinue:
-           print("correct, now tell the user they were right")
            show("Correct", after: 0)
         case .correctAndNewRound:
            show("Correct, time for new round", after: 0)
            showSequenceOfPresses()
-           print("correct, now tell the user what the next round should be")
         case .incorrect:
             gameLabel.alpha = 1
             gameLabel.text = "You lost. Press any button to start again"
@@ -126,7 +123,6 @@ class GamePlayViewController: UIViewController {
     }
     
     //MARK: - Helper Functions
-    
     func gameResponse(response: Move) {
         switch response {
         case .correctAndContinue:
