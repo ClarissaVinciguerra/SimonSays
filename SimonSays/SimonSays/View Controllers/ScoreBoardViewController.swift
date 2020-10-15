@@ -49,3 +49,21 @@ class ScoreBoardViewController: UIViewController {
     }
 
 }//END OF CLASS
+
+//MARK: - Extensions
+extension ScoreBoardViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return UserController.shared.users.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "scoreCell", for: indexPath)
+        
+        let user = UserController.shared.users[indexPath.row]
+        
+        cell.textLabel?.text = user.name
+        
+        
+        return cell
+    }
+}//END OF EXTENSION
