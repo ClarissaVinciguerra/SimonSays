@@ -29,13 +29,14 @@ class ScoreBoardViewController: UIViewController {
         
         alertController.addTextField { (usernameTextField) in
             usernameTextField.placeholder = "Enter your name here..."
+            usernameTextField.autocapitalizationType = .words
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let letsGoAction = UIAlertAction(title: "Let's Go!!", style: .default) { (_) in
             guard let username = alertController.textFields?[0].text, !username.isEmpty else { return }
             
-//            UserController.shared.addUser()
+//            UserController.shared.
             
             let gamePlayVC = GamePlayViewController()
             self.navigationController?.pushViewController(gamePlayVC, animated: true)
