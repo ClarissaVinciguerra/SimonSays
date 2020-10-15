@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ifO-nB-4DQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ai2-dX-rx7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -142,15 +142,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="U94-um-rFa"/>
                     <connections>
-                        <outlet property="blueButton" destination="1YY-7W-WcI" id="7UI-dM-NOQ"/>
-                        <outlet property="blueButtonPressed" destination="1YY-7W-WcI" id="q2x-Nh-jbV"/>
-                        <outlet property="gameLabel" destination="N7R-ck-Hfa" id="sgL-kg-j6R"/>
-                        <outlet property="greenButton" destination="T5y-vz-Yq5" id="hoW-aQ-An1"/>
-                        <outlet property="greenButtonPressed" destination="T5y-vz-Yq5" id="51q-OF-Eev"/>
-                        <outlet property="redButton" destination="6gJ-2m-cjZ" id="DRj-Au-vwT"/>
-                        <outlet property="redButtonPressed" destination="6gJ-2m-cjZ" id="wuX-5U-gA0"/>
-                        <outlet property="yellowButton" destination="wIX-k0-G7G" id="YUf-l0-lc6"/>
-                        <outlet property="yellowButtonPressed" destination="wIX-k0-G7G" id="bhd-6a-f2M"/>
+                        <outlet property="blueView" destination="1YY-7W-WcI" id="4ze-hV-MDr"/>
+                        <outlet property="gameLabel" destination="N7R-ck-Hfa" id="1bT-1i-ptk"/>
+                        <outlet property="greenView" destination="T5y-vz-Yq5" id="SXF-v3-lbU"/>
+                        <outlet property="redView" destination="6gJ-2m-cjZ" id="gzo-IA-rg2"/>
+                        <outlet property="yellowView" destination="wIX-k0-G7G" id="ks2-Fr-I1s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Azm-A7-qXa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
