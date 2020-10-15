@@ -16,7 +16,6 @@ class GamePlayViewController: UIViewController {
     @IBOutlet weak var yellowView: UIView!
     @IBOutlet weak var gameLabel: UILabel!
     
-    
     //MARK: - Properties
     let game = GameController()
     var isGameOver = false
@@ -26,8 +25,7 @@ class GamePlayViewController: UIViewController {
         super.viewDidLoad()
         addActionsToColorViews()
     }
-
-
+    
     //MARK: - Actions
     @objc func handleStartGame(_ sender: UITapGestureRecognizer) {
         game.startNewGame()
@@ -204,5 +202,4 @@ class GamePlayViewController: UIViewController {
     func saveScore() {
         
     }
-    
 }
