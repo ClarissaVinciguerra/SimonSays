@@ -52,6 +52,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddu-Hd-etv">
                                 <rect key="frame" x="103.5" y="658" width="207" height="45"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z8b-Np-Gcn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -67,6 +70,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Simon Says" id="YVI-8P-hFk"/>
+                    <connections>
+                        <outlet property="loginButton" destination="ddu-Hd-etv" id="8u8-75-wip"/>
+                        <outlet property="scoreBoardTableView" destination="SkD-Ca-nqV" id="ewe-Tf-WiB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,6 +141,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="U94-um-rFa"/>
+                    <connections>
+                        <outlet property="blueButton" destination="1YY-7W-WcI" id="7UI-dM-NOQ"/>
+                        <outlet property="blueButtonPressed" destination="1YY-7W-WcI" id="q2x-Nh-jbV"/>
+                        <outlet property="gameLabel" destination="N7R-ck-Hfa" id="sgL-kg-j6R"/>
+                        <outlet property="greenButton" destination="T5y-vz-Yq5" id="hoW-aQ-An1"/>
+                        <outlet property="greenButtonPressed" destination="T5y-vz-Yq5" id="51q-OF-Eev"/>
+                        <outlet property="redButton" destination="6gJ-2m-cjZ" id="DRj-Au-vwT"/>
+                        <outlet property="redButtonPressed" destination="6gJ-2m-cjZ" id="wuX-5U-gA0"/>
+                        <outlet property="yellowButton" destination="wIX-k0-G7G" id="YUf-l0-lc6"/>
+                        <outlet property="yellowButtonPressed" destination="wIX-k0-G7G" id="bhd-6a-f2M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Azm-A7-qXa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
