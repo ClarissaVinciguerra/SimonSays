@@ -58,6 +58,22 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		6CC04E3C2538CA62003A0222 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6CC04E3D2538CA71003A0222 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6CC04E3D2538CA71003A0222 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6C10609C2537A9DF009CBF5A /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		70211FE82537714E00986313 = {
 			isa = PBXGroup;
 			children = (
@@ -77,12 +93,12 @@
 		70211FF32537714E00986313 /* SimonSays */ = {
 			isa = PBXGroup;
 			children = (
+				6CC04E3C2538CA62003A0222 /* Views */,
 				C3D972CA2537AFD200426C90 /* Constants */,
 				C3D972C22537AF8800426C90 /* Models */,
 				6C1060A02537AECE009CBF5A /* View Controllers */,
 				702120122537967D00986313 /* Controllers */,
 				702120092537715C00986313 /* Resources */,
-				6C10609C2537A9DF009CBF5A /* Main.storyboard */,
 			);
 			path = SimonSays;
 			sourceTree = "<group>";
