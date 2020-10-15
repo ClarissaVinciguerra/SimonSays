@@ -29,13 +29,14 @@ class ScoreBoardViewController: UIViewController {
         
         alertController.addTextField { (usernameTextField) in
             usernameTextField.placeholder = "Enter your name here..."
+            usernameTextField.autocapitalizationType = .words
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let letsGoAction = UIAlertAction(title: "Let's Go!!", style: .default) { (_) in
             guard let username = alertController.textFields?[0].text, !username.isEmpty else { return }
             
-//            UserController.shared.addUser()
+//            UserController.shared.
             
             let gamePlayVC = GamePlayViewController()
             self.navigationController?.pushViewController(gamePlayVC, animated: true)
@@ -49,3 +50,21 @@ class ScoreBoardViewController: UIViewController {
     }
 
 }//END OF CLASS
+
+//MARK: - Extensions
+extension ScoreBoardViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return UserController.shared.users.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "scoreCell", for: indexPath)
+        
+        let user = UserController.shared.users[indexPath.row]
+        
+        cell.textLabel?.text = user.name
+        
+        
+        return cell
+    }
+}//END OF EXTENSION
