@@ -14,26 +14,26 @@ class GameController {
     var correctMoves: [Int] = []
     
     // add a return value to the following func
-    func userSelected(_ value: Int) {
+    func userSelected(_ value: Int) -> Move {
         userMoves.append(value)
         
         if correctMoves.count == userMoves.count {
             if correctMoves == userMoves {
-                // call create next round func
-                //return
+                createNextRound()
+                return Move.correctAndNewRound
             } else {
                 print("Incorrect")
-                // return
+                return Move.incorrect
             }
         } else {
             for number in 0..<userMoves.count {
                 if correctMoves[number] != userMoves[number] {
                     print("Incorrect")
-                    //return
+                    return Move.incorrect
                 }
             }
             print("All moves are correct so far")
-            // return Move.correctAndContinue
+            return Move.correctAndContinue
         }
     }
     
@@ -48,6 +48,7 @@ class GameController {
     func startNewGame() {
         correctMoves = [pickRandomNumberBetween0and3(), pickRandomNumberBetween0and3(), pickRandomNumberBetween0and3()]
         userMoves = []
+        
         print("Correct moves: \(correctMoves)")
     }
     
